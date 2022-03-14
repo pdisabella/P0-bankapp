@@ -22,9 +22,15 @@ public class UserService {
 	 * @throws InvalidCredentialsException if either username is not found or password does not match
 	 * @return the User who is now logged in
 	 */
-	public User login(String username, String password) {
-		return null;
-	}
+	public User login(User u, String user, String pass) {
+		if (user.equals(u.getUsername()) && pass.equals(u.getPassword()))		 {
+
+			return true;
+
+		} else {
+
+			return false;
+		}
 	
 	/**
 	 * Creates the specified User in the persistence layer
